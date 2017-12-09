@@ -1,0 +1,47 @@
+header {
+	@include flexbox;
+	@include flex-direction(column);
+	@include align-items(center);
+	@extend %center-content;
+}
+
+header h3 {
+	text-align: center;
+}
+
+.searchbar-div {
+	@include flexbox;
+	@include align-self(center);
+	@include position(relative);
+	width: 100%
+}
+
+.searchbar-div .fa-search {
+	@include position(absolute);
+	color: $grey;
+	right: 15px;
+	top: 10px;
+}
+
+#searchbar {
+	@include flex(1);
+	@extend %no-outline;
+	font-size: 14px;
+	height: 40px;
+	padding-left: 18px;
+	border-radius: 5px;
+	border: 1px solid $grey;
+}
+
+@include mq(medium) {
+	
+	header {
+		@include justify-content(space-between);
+		@include flex-direction(row);
+	}
+
+	.searchbar-div {
+		width: 30%;
+	}
+
+}

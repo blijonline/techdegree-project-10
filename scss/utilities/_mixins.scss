@@ -1,0 +1,82 @@
+//=========
+// Flexbox 
+//=========
+
+@mixin flexbox {
+     display: flex;
+}
+
+@mixin flexwrap {
+  flex-wrap: wrap;
+} 
+
+@mixin flex-direction($val) {
+  flex-direction: $val;
+}
+
+@mixin justify-content($val) {
+  justify-content: $val;
+}
+@mixin align-items($val) {
+  align-items: $val;
+}
+  
+@mixin align-self($val) {
+  align-self: $val;
+}
+
+@mixin order($val) {
+  order: $val;
+}
+
+@mixin flex($values) {
+  flex: $values;
+}
+
+@mixin flex-grow($val) {
+  flex-grow: $val;
+}  
+
+@mixin flex-basis($val) {
+  flex-basis: $val;
+}  
+
+//=========
+// Media Queries
+//=========
+
+@mixin mq($break) {
+
+  @if $break == "small" {
+    @media (min-width: $brkpoint--sm +1) {
+        @content;
+      }
+  } @else if $break == "medium" {
+    @media (min-width: $brkpoint--md + 1) {
+        @content;
+      }
+  } @else if $break == "large" {
+    @media (min-width: $brkpoint--lg) {
+      @content;
+      }
+  } @else if $break == "x-large" {
+    @media (min-width: $brkpoint--x-lg) {
+      @content;
+      } 
+  } @else {
+    @error "`#{$break}` is not an acceptable value. Must be 'small' 'medium' 'large' or 'x-large'. "
+  }
+}
+
+
+//=========
+// Misc
+//=========
+
+@mixin position($val) {
+  position: $val;
+}
+
+@mixin display($val) {
+  display: $val;
+}
