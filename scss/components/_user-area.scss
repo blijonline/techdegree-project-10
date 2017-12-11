@@ -1,1 +1,15 @@
+.container {
+	@extend %center-content;
+	@include flexbox;
+	flex-wrap: wrap;
+	@include grid;
+	@include grid-template-rows(repeat(4, 185px));
+	@include grid-template-columns(repeat(3, 415px));
+	@include grid-column-gap(38px);
+	@include grid-row-gap(32px);
+}
 
+.user-container {
+	border: 2px solid $grey;
+	border-radius: 5px;
+}

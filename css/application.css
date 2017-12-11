@@ -398,10 +398,10 @@ html {
 body {
   font-family: "Lato", sans-serif; }
 
-header {
+header, .container {
   width: 90%;
   margin: 0 auto;
-  max-width: 1060px; }
+  max-width: 1320px; }
 
 #searchbar {
   outline: 0; }
@@ -441,5 +441,17 @@ header h3 {
 
   .searchbar-div {
     width: 30%; } }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-rows: repeat(4, 185px);
+  grid-template-columns: repeat(3, 415px);
+  grid-column-gap: 38px;
+  grid-row-gap: 32px; }
+
+.user-container {
+  border: 2px solid #b2b2b2;
+  border-radius: 5px; }
 
 /*# sourceMappingURL=application.css.map */

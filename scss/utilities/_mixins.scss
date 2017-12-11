@@ -42,6 +42,50 @@
 }  
 
 //=========
+// Grid
+//=========
+
+@mixin grid {
+  display: grid;
+}
+
+@mixin grid-row($val) {
+  grid-row: $val; 
+};
+
+@mixin grid-column($val) {
+  grid-column: $val; 
+};
+
+@mixin grid-template-columns($val) {
+  grid-template-columns: $val; 
+};
+
+@mixin grid-template-rows($val) {
+  grid-template-rows: $val; 
+};
+
+@mixin grid-column-gap($val) {
+  grid-column-gap: $val;
+}
+
+@mixin grid-row-gap($val) {
+  grid-row-gap: $val;
+}
+
+@mixin grid-column-start($val) {
+  grid-column-start: $val; 
+};
+
+@mixin grid-column-end($val) {
+  grid-column-end: $val; 
+};
+
+@mixin grid-auto-columns($val) {
+  grid-auto-columns: $val; 
+};
+
+//=========
 // Media Queries
 //=========
 
