@@ -1,15 +1,29 @@
 .container {
 	@extend %center-content;
 	@include flexbox;
-	flex-wrap: wrap;
+	@include justify-content(center);
 	@include grid;
-	@include grid-template-rows(repeat(4, 185px));
-	@include grid-template-columns(repeat(3, 415px));
-	@include grid-column-gap(38px);
+	@include grid-template-rows(repeat(12, 185px));
+	@include grid-template-columns(repeat(auto-fill, minmax(275px, 415px)));
+	@include grid-column-gap(36px);
 	@include grid-row-gap(32px);
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
 .user-container {
 	border: 2px solid $grey;
 	border-radius: 5px;
+}
+
+@include mq(large) {
+	.container {
+		@include grid-template-rows(repeat(6, 185px));
+	}
+}
+
+@include mq(x-large) {
+	.container {
+		@include grid-template-rows(repeat(4, 185px));
+	}
 }
