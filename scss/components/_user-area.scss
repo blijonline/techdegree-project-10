@@ -1,4 +1,4 @@
-.container {
+#users {
 	@extend %center-content;
 	@include flexbox;
 	@include justify-content(center);
@@ -12,18 +12,33 @@
 }
 
 .user-container {
+	@include flexbox;
+	@extend %cursor-pointer;
 	border: 2px solid $grey;
 	border-radius: 5px;
 }
 
+img {
+	@include align-self(center);
+	margin-left: 30px;
+	border-radius: 50px;
+	height: 100px;
+}
+
+.user-info {
+	@include flex(1);
+	@include align-self(center);
+	text-align: center;
+}
+
 @include mq(large) {
-	.container {
+	#users {
 		@include grid-template-rows(repeat(6, 185px));
 	}
 }
 
 @include mq(x-large) {
-	.container {
+	#users {
 		@include grid-template-rows(repeat(4, 185px));
 	}
 }

@@ -7,3 +7,19 @@
 %no-outline {
 	outline: 0;
 }
+
+%cursor-pointer {
+	cursor: pointer;
+}
+
+%hover-transition-slow {
+	transition: 0.4s ease-in;
+}
+
+%hover-transition-medium {
+	transition: 0.3s ease-in;
+}
+
+%hover-transition-fast {
+	transition: 0.2s ease-in;
+}

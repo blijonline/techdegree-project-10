@@ -2,10 +2,16 @@ $.ajax({
   url: 'https://randomuser.me/api/?results=12',
   dataType: 'json',
   success: function(data) {
-    var userContainer = document.querySelectorAll(".user-container");
+    	var userContainer = '';
     $.each(data.results, function(i, user){
-    	userContainer += user.name.first;
+    	userContainer += '<div class="user-container">';
+    	userContainer += '<img src="' + user.picture.large + '">';
+    	userContainer += '<div class="user-info"> <h3>' + user.name.first + ' ' + user.name.last + '</h3>';
+    	userContainer += '<p>' + user.email + '</p>';
+    	userContainer += '<p>' + user.login.username + '</p> </div>';
+    	userContainer += '</div>';
+
     });
-    $('.user-container').html(userContainer);
+    $('#users').html(userContainer);
   }
 });
