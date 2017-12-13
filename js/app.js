@@ -16,6 +16,8 @@ $.ajax({
   }
 });
 
+$("#modal").iziModal();
+
 $(document).on('click', '.user-container', function (event) {
     event.preventDefault();
     $('#modal').iziModal('open');
